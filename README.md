@@ -1,14 +1,8 @@
 # Java_and_Web_Application
 Course: Java_and_Web_Application
 
-# Update Logs
-
-## 2024-11-02
-+ 完成基本框架搭建
-
-## 2024-11-07
 计划实现一个校园论坛系统，预期实现功能如下：
-    
+
 - [ ] 用户注册与登录：
 + 用户可以创建账户、登录、修改个人资料。
 - [ ] 帖子管理：
@@ -24,6 +18,18 @@ Course: Java_and_Web_Application
 - [ ] 个人主页与通知系统：
 + 用户可以查看自己的帖子、评论和点赞历史。
 + 系统可以向用户发送通知（如新回复、点赞通知等）。
-- [ ]管理员管理后台：
+- [ ] 管理员管理后台：
 + 管理员可以审核帖子和评论，处理举报内容。
 + 管理员可以对用户进行相关操作。
+
+# Update Logs
+
+## 2024-11-02
++ 完成基本框架搭建
+
+## 2024-11-07
++ 计划实现一个校园论坛系统
+
+## 2024-11-10
++ 学习了一些基本的JavaWeb开发概念：[JavaBean](https://blog.csdn.net/CZB_xiaoniu/article/details/79470703)、[java知识之Controller+Dao+Service+Filter+Pojo+Utils+Vo各层分析](https://blog.csdn.net/qq_38881474/article/details/96447154)
++ 实现可能用到的类：管理员/用户、发帖/回复
