@@ -36,3 +36,6 @@ Course: Java_and_Web_Application
 
 ## 2024-11-12
 + Mybatis便利JDBC：[MyBatis(优点&缺点)&MyBatis使用详解！](https://zhuanlan.zhihu.com/p/338487669)、[Mybatis 框架快速入门（超详细）](https://blog.csdn.net/weixin_43883917/article/details/113731380)
+
+## 2024-11-12
++ MyBatis + 网站调用，实现“增”操作

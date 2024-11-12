@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuchen.dao.UserDao">
+    <select id="login_info" resultType="com.yuchen.bean.User">
+        select * from user_info where username = #{username} and password = #{password}
+    </select>
+    
+    <select id="select_Username" resultType="com.yuchen.bean.User">
+        select * from user_info where username = #{username}
+    </select>
+    
+    <insert id="add_User" parameterType="com.yuchen.bean.User">
+        insert into user_info (nickname, username, password, birthday, sex, phone, email, signature)
+        values (#{nickname}, #{username}, #{password}, #{birthday}, #{sex}, #{phone}, #{email}, #{signature})
+    </insert>
+    
+    <select id="findUserById" resultType="com.yuchen.bean.User">
+        select * from user_info where id = #{userId};
+    </select>
+
+    <update id="update_nickname" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET nickname = #{nickname}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="update_password" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET password = #{password}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="update_birthday" parameterType="com.yuchen.bean.User">
+        UPDATE user_info
+        SET birthday = #{birthday}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="update_sex" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET sex = #{sex}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="update_phone" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET phone = #{phone}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="update_email" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET email = #{email}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="update_signature" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET signature = #{signature}
+        WHERE id = #{userId}
+    </update>
+
+    <select id="getAllUser" parameterType="com.yuchen.bean.User">
+        select * from user_info
+    </select>
+
+    <delete id="delete_user" parameterType="com.yuchen.bean.User">
+        delete from user_info where id = #{id}
+    </delete>
+</mapper>
