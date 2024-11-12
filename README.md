@@ -33,3 +33,6 @@ Course: Java_and_Web_Application
 ## 2024-11-10
 + 学习了一些基本的JavaWeb开发概念：[JavaBean](https://blog.csdn.net/CZB_xiaoniu/article/details/79470703)、[java知识之Controller+Dao+Service+Filter+Pojo+Utils+Vo各层分析](https://blog.csdn.net/qq_38881474/article/details/96447154)
 + 实现可能用到的类：管理员/用户、发帖/回复
+
+## 2024-11-12
++ Mybatis便利JDBC：[MyBatis(优点&缺点)&MyBatis使用详解！](https://zhuanlan.zhihu.com/p/338487669)、[Mybatis 框架快速入门（超详细）](https://blog.csdn.net/weixin_43883917/article/details/113731380)
