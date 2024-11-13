@@ -24,6 +24,7 @@
     </environments>
 
     <mappers>
+        <mapper resource="com/yuchen/dao/ForumDao.xml"/>
         <mapper resource="com/yuchen/dao/UserDao.xml"/>
     </mappers>
 </configuration>
