@@ -53,3 +53,6 @@ Course: Java_and_Web_Application
 
 ## 2024-11-14
 + 游客帖子广场，游客点赞filter处理
+
+## 2024-11-15
++ 作者信息的网页
