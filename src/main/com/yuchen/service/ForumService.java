@@ -108,6 +108,7 @@ public class ForumService {
 
         return cnt;
     }
+
     //更新帖子
     public int updatePost(String title, String content, int fid) {
         sqlSession = MybatisUtils.getSqlSession();

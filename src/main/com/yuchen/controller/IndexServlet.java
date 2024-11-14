@@ -20,7 +20,7 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取精选帖子
-        List<Forum> selectedPostList =  forumService.getSelectedPostList();
+        List<Forum> selectedPostList = forumService.getSelectedPostList();
 
         //以点赞数从多到少进行一个排序
         selectedPostList.sort(Comparator.comparingInt(Forum::getUp).reversed());

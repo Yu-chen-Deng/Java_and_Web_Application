@@ -9,7 +9,7 @@
     <body>
         <nav>
             <ul>
-                <li>${user.nickname}, 欢迎您访问 xxx 校园论坛。</li>
+                <li>${user.nickname}, 欢迎您访问 西南大学 校园论坛。</li>
                 <li><a href="indexServlet">首页</a> </li>
                 <li><a href="post.jsp" target="_blank">发帖</a> </li>
                 <li><a href="allPostServlet">帖子广场</a></li>

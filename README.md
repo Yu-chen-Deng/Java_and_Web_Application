@@ -1,6 +1,15 @@
 # Java_and_Web_Application
 Course: Java_and_Web_Application
 
+# Environment Setup
+
++ Apache Tomcat 11.0
++ Smart Tomcat 4.7.3
++ Azul Zulu 17.0.13
++ IntelliJ IDEA Community Edition 2024.1.4
+
+# TO DO
+
 计划实现一个校园论坛系统，预期实现功能如下：
 
 - [ ] 用户注册与登录：
@@ -41,3 +50,6 @@ Course: Java_and_Web_Application
 + MyBatis + 网站调用，实现“增”操作
 + 暂时有点写不动了，把注册和登录网页的css写了
 + 新增：用户页面，主页面，退出的Servlet
+
+## 2024-11-14
++ 游客帖子广场，游客点赞filter处理

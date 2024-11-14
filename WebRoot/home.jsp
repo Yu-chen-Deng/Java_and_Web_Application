@@ -10,7 +10,7 @@
 
     <body>
         <header>
-            <h1>校园论坛</h1>
+            <h1>西南大学 校园论坛</h1>
             <nav>
                 <ul>
                     <li><a href="indexServlet">首页</a></li>
@@ -53,7 +53,7 @@
                 <h2>最新发布</h2>
                 <c:if test="${empty recentPostList}">
                     <article>
-                        <p>哎呀！抱歉，暂时无人发帖.</p>
+                        <p>哎呀！抱歉，暂时无人发帖。</p>
                     </article>
                 </c:if>
 
