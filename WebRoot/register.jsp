@@ -22,11 +22,27 @@
                 <label for="password">密码</label>
                 <input name="password" type="password" id="password" placeholder="请输入您的密码，长度应在6到20个字符之间" style="width: 350px;" required>
             </div>
+            <div class="form-group">
+                <label for="checkCode">验证码</label>
+                <input name="checkCode" type="text" id="checkCode" placeholder="请您输入验证码" style="margin-bottom: 15px; width: 200px">
+                <br>
+                <img id="checkCodeImg" src="checkCodeServlet" style="margin-bottom: 15px; width: 150px;">
+                <a href="#" id="changeImg" style="margin-left: 20px; text-decoration: none; display: block">看不清？换一张。</a>
+            </div>
             <button type="submit">注册</button>
         </form>
         <div class="links">
             <p>已有账号?<a href="login.jsp">登录</a> | <a href="indexServlet">返回主页</a> </p>
         </div>
     </div>
+
+    <script>
+        document.getElementById("changeImg").onclick = function () {
+            document.getElementById("checkCodeImg").src = "checkCodeServlet?" + new Date().getMilliseconds();
+        }
+        document.getElementById("checkCodeImg").onclick = function () {
+            document.getElementById("checkCodeImg").src = "checkCodeServlet?" + new Date().getMilliseconds();
+        }
+    </script>
 </body>
 </html>

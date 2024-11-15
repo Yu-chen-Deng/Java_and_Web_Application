@@ -56,3 +56,4 @@ Course: Java_and_Web_Application
 
 ## 2024-11-15
 + 作者信息的网页
++ 注册页面验证码添加

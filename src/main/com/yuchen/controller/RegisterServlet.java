@@ -40,6 +40,19 @@ public class RegisterServlet extends HttpServlet {
             return ;
         }
 
+        // 获取用户输入的验证码
+        String checkCode = req.getParameter("checkCode");
+        // 程序生成的验证码，从Session获取
+        HttpSession session = req.getSession();
+        String checkCodeGen = (String) session.getAttribute("checkCodeGen");
+        if (!checkCodeGen.equalsIgnoreCase(checkCode)) {//验证不对
+            req.setAttribute("checkCode_msg", "输入验证错误，请重新输入");
+            //验证码输入不对回到注册界面，并提示
+            req.getRequestDispatcher("/register.jsp").forward(req, resp);
+            // 不允许注册
+            return;
+        }
+
         if (!userService.checkUser(username)) {
             System.out.println(username);
             req.setAttribute("register_msg", "账号已存在");
