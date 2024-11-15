@@ -5,8 +5,10 @@ Course: Java_and_Web_Application
 
 + Apache Tomcat 11.0
 + Smart Tomcat 4.7.3
-+ Azul Zulu 17.0.13
++ Azul Zulu 17.0.13 (JDK17)
 + IntelliJ IDEA Community Edition 2024.1.4
++ MySQL 8.4
++ Windows 11
 
 # TO DO
 
@@ -57,3 +59,4 @@ Course: Java_and_Web_Application
 ## 2024-11-15
 + 作者信息的网页
 + 注册页面验证码添加
++ 游客模式下，查看帖子详情页面
