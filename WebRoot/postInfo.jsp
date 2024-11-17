@@ -34,7 +34,7 @@
                     </div>
 
                     <div id="allReply">
-                        <h4>所有评论   <a href="login.jsp"> 您尚未登录，点我登录后方可  </a></h4>
+                        <h4>所有评论   <a href="login.jsp"> 您尚未登录，点我登录后方可发送评论~  </a></h4>
                         <c:choose>
                             <c:when test="${empty replyList}">
                                 暂时无人回复

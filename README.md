@@ -64,3 +64,6 @@ Course: Java_and_Web_Application
 
 ## 2024-11-16
 + 用户页面查看帖子详情，and可以对帖子进行评论/点赞
+
+## 2024-11-18
++ 完善部分css

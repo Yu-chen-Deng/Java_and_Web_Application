@@ -37,7 +37,7 @@
                                     <p>${post.content}</p>
                                     <fmt:formatDate value="${post.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                                     <div id="link">
-                                        <span style="color: #007bff; font-weight: bold;">发布时间:${formattedDate}</span>
+                                        <span style="color: #037BC2; font-weight: bold;">发布时间:${formattedDate}</span>
                                         <a href="upServlet">点赞( ${post.up} )</a>
                                         <a href="postInfoServlet?fid=${post.fid}" target="_blank">评论区</a>
                                         <a href="findUserByIdServlet?userId=${post.userId}&URL=authorInfo.jsp" target="_blank">作者:${post.author.nickname}</a>
@@ -64,7 +64,7 @@
                                 <h3>帖子标题: ${post.title}</h3>
                                 <fmt:formatDate value="${post.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                                 <div id="link">
-                                    <span style="color: #007bff; font-weight: bold;">发布时间:${formattedDate}</span>
+                                    <span style="color: #037BC2; font-weight: bold;">发布时间:${formattedDate}</span>
                                     <a href="upServlet">点赞( ${post.up} )</a>
                                     <a href="findUserByIdServlet?userId=${post.userId}&URL=authorInfo.jsp" target="_blank">作者:${post.author.nickname}</a>
                                     <a href="postInfoServlet?fid=${post.fid}" target="_blank">点此查看全帖</a>
