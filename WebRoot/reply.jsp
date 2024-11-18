@@ -11,17 +11,20 @@
         <title>评论</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>${user.nickname}, 欢迎您访问西南大学校园论坛。</li>
-                <li><a href="indexServlet">首页</a> </li>
-                <li><a href="post.jsp" target="_blank">发帖</a> </li>
-                <li><a href="allPostServlet">帖子广场</a></li>
-                <li><a href="getUserPostListServlet">我的帖子</a></li>
-                <li><a href="user_info.jsp">个人信息</a></li>
-                <li><a href="logoutServlet">登出</a></li>
-            </ul>
-        </nav>
+        <header>
+            <h1>西南大学 校园论坛</h1>
+            <nav>
+                <ul>
+                    <li><a href="indexServlet">首页</a> </li>
+                    <li><a href="post.jsp" target="_blank">发帖</a> </li>
+                    <li><a href="allPostServlet">帖子广场</a></li>
+                    <li><a href="getUserPostListServlet">我的帖子</a></li>
+                    <li><a href="user_info.jsp">个人信息</a></li>
+                    <li><a href="logoutServlet">登出</a></li>
+                </ul>
+            </nav>
+            <a href="user_info.jsp">${user.nickname}</a>
+        </header>
 
         <div class="container">
             <section>

@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <h1>西南大学校园论坛</h1>
+            <h1>西南大学 校园论坛</h1>
             <nav>
                 <ul>
                     <li><a href="indexServlet">首页</a></li>

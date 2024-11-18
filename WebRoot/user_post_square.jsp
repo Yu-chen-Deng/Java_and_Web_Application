@@ -3,20 +3,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
     <head>
-        <title>游客-帖子广场-西南大学校园论坛</title>
-        <link rel="stylesheet" href="css/home.css">
+        <title>帖子广场</title>
+        <link rel="stylesheet" href="css/user_page.css">
     </head>
     <body>
         <header>
             <h1>西南大学 校园论坛</h1>
             <nav>
                 <ul>
-                    <li><a href="index.jsp">首页</a></li>
-                    <li><a href="allPostServlet?root=tourist">帖子广场</a></li>
-                    <li><a href="register.jsp">注册</a></li>
-                    <li><a href="login.jsp">登录</a></li>
+                    <li><a href="indexServlet">首页</a> </li>
+                    <li><a href="post.jsp" target="_blank">发帖</a> </li>
+                    <li><a href="allPostServlet">帖子广场</a></li>
+                    <li><a href="getUserPostListServlet">我的帖子</a></li>
+                    <li><a href="user_info.jsp">个人信息</a></li>
+                    <li><a href="logoutServlet">登出</a></li>
                 </ul>
             </nav>
+            <a href="user_info.jsp">${user.nickname}</a>
         </header>
 
         <div class="container">
@@ -34,16 +37,16 @@
                             <p>${post.content}</p>
                             <fmt:formatDate value="${post.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                             <div id="link">
-                                <span style="color: #037BC2; font-weight: bold;">发布时间:${formattedDate}</span>
-                                <a href="upServlet">点赞(  ${post.up}  )</a>
-                                <a href="postInfoServlet?fid=${post.fid}" target="_blank">评论区</a>
-                                <a href="findUserByIdServlet?userId=${post.userId}&URL=authorInfo.jsp" target="_blank">作者:${post.author.nickname}</a>
+                                <span style="color: #007bff; font-weight: bold;">发布时间:${formattedDate}</span>
+                                <a href="upServlet?fid=${post.fid}&URL=allPostServlet">${empty up_msg  ||  upId != post.fid ? '点赞  ' : '点赞成功！ '}(  ${post.up}  )</a>
+                                <a href="getReplyByFidServlet?fid=${post.fid}&URL=reply.jsp" target="_blank">评论区</a>
+                                <a href="findUserByIdServlet?userId=${post.userId}&URL=user_authorInfo" target="_blank">作者:${post.author.nickname}</a>
                             </div>
                         </article>
                     </section>
                 </c:forEach>
 
-<%--                    分页--%>
+                <%--                    分页--%>
                 <div class="page">
                     <c:forEach var="i" begin="1" end="${totalPages}">
                         <a href="allPostServlet?page=${i}">${i}</a>

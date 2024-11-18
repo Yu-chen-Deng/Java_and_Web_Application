@@ -17,14 +17,22 @@ body {
 }
 
 header {
-    background-color: rgba(68, 68, 68, 0.8);
-    color: beige;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #02507e;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     font-size: 36px;
+}
+
+header>a {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #02507e;
+    text-decoration: none;
 }
 
 nav ul {
