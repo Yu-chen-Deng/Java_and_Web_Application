@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
     <head>
-        <title>用户信息</title>
+        <title>用户信息 - 西南大学校园论坛</title>
         <link rel="stylesheet" href="css/home.css">
         <style>
             h2 {
@@ -32,7 +32,7 @@
     </head>
     <body>
         <header>
-            <h1>西南大学校园论坛</h1>
+            <h1>西南大学 校园论坛</h1>
             <nav>
                 <ul>
                     <li><a href="index.jsp">首页</a></li>

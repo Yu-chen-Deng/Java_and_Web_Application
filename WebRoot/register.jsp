@@ -4,7 +4,7 @@
 <html lang="zh">
 <head>
     <link rel="stylesheet" href="css/register.css">
-    <title>欢迎注册</title>
+    <title>注册 - 西南大学校园论坛</title>
 </head>
 <body>
     <div class="register-container">

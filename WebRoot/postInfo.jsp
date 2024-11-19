@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
     <head>
-        <title>帖子详情</title>
+        <title>帖子详情 - 西南大学校园论坛</title>
         <link rel="stylesheet" href="css/postInfo.css">
     </head>
     <body>

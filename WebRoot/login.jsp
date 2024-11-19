@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
-        <title>欢迎登陆</title>
+        <title>登录 - 西南大学校园论坛</title>
         <link rel="stylesheet" href="css/login.css">
     </head>
     <body>

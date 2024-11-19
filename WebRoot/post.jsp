@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
-        <title>发帖</title>
+        <title>发帖 - 西南大学校园论坛</title>
         <link rel="stylesheet" href="css/post.css">
     </head>
     <body>

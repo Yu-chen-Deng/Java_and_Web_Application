@@ -5,7 +5,7 @@
 <html lang="zh">
     <head>
         <link rel="stylesheet" href="css/home.css">
-        <title>西南大学校园论坛</title>
+        <title>首页 - 西南大学校园论坛</title>
     </head>
 
     <body>
