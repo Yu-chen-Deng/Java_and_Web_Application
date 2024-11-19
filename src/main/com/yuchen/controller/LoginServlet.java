@@ -23,20 +23,20 @@ public class LoginServlet extends HttpServlet {
         int type = Integer.parseInt(req.getParameter("type"));
 
         if (type == 2) {
-//            AdminUser adminUser = loginService.adminLogin(username, password);
-//            if (adminUser == null) {
-//                req.setAttribute("login_msg","账号或密码错误");
-//                req.getRequestDispatcher("/login.jsp").forward(req,resp);
-//
-//                return ;
-//            }
-//
-//            session.setAttribute("user", adminUser);
-//            if ("1".equals(remember)) {
-//                dealCookie(username, password, resp);
-//            }
-//
-//            resp.sendRedirect("indexServlet");
+            AdminUser adminUser = loginService.adminLogin(username, password);
+            if (adminUser == null) {
+                req.setAttribute("login_msg","账号或密码错误");
+                req.getRequestDispatcher("/login.jsp").forward(req,resp);
+
+                return ;
+            }
+
+            session.setAttribute("user", adminUser);
+            if ("1".equals(remember)) {
+                dealCookie(username, password, resp);
+            }
+
+            resp.sendRedirect("indexServlet");
         }
         else {
             User user = loginService.login(username, password);

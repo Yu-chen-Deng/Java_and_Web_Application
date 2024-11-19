@@ -10,4 +10,11 @@ public class LoginService {
 
         return user;
     }
+
+    public AdminUser adminLogin(String username, String password){
+        AdminUserService adminUserService = new AdminUserService();
+        AdminUser adminUser = adminUserService.login(username, password);
+
+        return adminUser;
+    }
 }
