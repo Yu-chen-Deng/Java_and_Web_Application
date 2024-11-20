@@ -67,4 +67,13 @@ public class AdminUserService {
         sqlSession.commit();
         sqlSession.close();
     }
+    public void unsetSelectedPost(int fid) {
+        sqlSession = MybatisUtils.getSqlSession();
+        ForumDao forumDao = sqlSession.getMapper(ForumDao.class);
+
+        forumDao.unsetSelectedPost(fid);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }

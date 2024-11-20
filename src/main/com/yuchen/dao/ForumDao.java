@@ -29,4 +29,6 @@ public interface ForumDao {
     void deleteUserAllPost(int userId);
     //设置帖子为精选帖
     void setSelectedPost(int fid);
+    //取消帖子为精选帖
+    void unsetSelectedPost(int fid);
 }

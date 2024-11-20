@@ -43,7 +43,7 @@
                                 发布时间:${formattedDate}
                                 <c:choose>
                                     <c:when test="${post.selected == 1}">
-                                        <a href="#"> 精选帖 </a>
+                                        <a href="unsetSelectedPostServlet?fid=${post.fid}"> 取消精选帖 </a>
                                     </c:when>
                                     <c:otherwise>
                                         <a href="setSelectedPostServlet?fid=${post.fid}">设置为精选帖</a>
