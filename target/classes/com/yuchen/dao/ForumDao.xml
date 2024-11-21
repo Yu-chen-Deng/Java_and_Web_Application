@@ -88,6 +88,12 @@
         where fid = #{fid}
     </update>
 
+<!--    取消帖子为精选帖-->
+    <update id="unsetSelectedPost" parameterType="Forum">
+        UPDATE forum_info
+        set selected = 0
+        where fid = #{fid}
+    </update>
 </mapper>
 
 
