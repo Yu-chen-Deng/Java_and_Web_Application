@@ -4,6 +4,26 @@
 <html lang="zh">
     <head>
         <title>发帖 - 西南大学校园论坛</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked@2.1.3/marked.min.js"></script>
+        <script>
+            marked.setOptions({
+                breaks: true,       // 支持换行符
+                gfm: true,          // 支持 GitHub 风格的 Markdown（包括表格、任务列表等）
+                tables: true,       // 启用表格支持
+                taskLists: true     // 启用任务列表支持
+            });
+
+            function updatePreview() {
+                const content = document.getElementById("content").value;
+                const preview = document.getElementById("preview");
+
+                if (typeof marked === "function") {
+                    preview.innerHTML = marked(content); // 正常渲染
+                } else {
+                    console.error("Marked is not a function");
+                }
+            }
+        </script>
         <link rel="stylesheet" href="css/post.css">
     </head>
     <body>
@@ -26,10 +46,16 @@
              <article>
                  <h2>发帖</h2>
                  <form id="post_form" action="postServlet" method="post">
-                     <p>标题</p>
-                     <input name="title" type="text" rows="3" placeholder="最多20个字" required>
-                     <p>内容<textarea name="content" rows="10" placeholder="可垂直方向拉伸文本框" required></textarea></p>
-                     <input type="submit" value="发布">
+                     <label for="title">标题:</label>
+                     <input type="text" name="title" id="title" required><br>
+
+                     <label for="content">Markdown内容:</label>
+                     <textarea name="content" id="content" rows="10" cols="50" oninput="updatePreview()" required></textarea><br>
+
+                     <label for="preview">实时预览:</label>
+                     <div id="preview" style="border: 1px solid #ccc; padding: 10px;"></div><br>
+
+                     <input type="submit" value="提交">
                  </form>
              </article>
         </div>

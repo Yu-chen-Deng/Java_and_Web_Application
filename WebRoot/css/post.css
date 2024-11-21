@@ -82,7 +82,7 @@ form p {
     margin-bottom: 15px;
 }
 
-form input[type="text"], form textarea {
+form input[type="text"], form textarea, form #preview {
     font-size: 16px;
     width: 100%;
     padding: 8px;

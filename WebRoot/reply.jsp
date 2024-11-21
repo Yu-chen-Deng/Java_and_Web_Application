@@ -7,8 +7,25 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
-        <link rel="stylesheet" href="css/reply.css">
         <title>评论 - 西南大学校园论坛</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked@2.1.3/marked.min.js"></script>
+        <script>
+            marked.setOptions({
+                breaks: true,       // 支持换行符
+                gfm: true,          // 支持 GitHub 风格的 Markdown（包括表格、任务列表等）
+                tables: true,       // 启用表格支持
+                taskLists: true     // 启用任务列表支持
+            });
+            const content = document.getElementById("preview").value;
+            const preview = document.getElementById("preview");
+
+            if (typeof marked === "function") {
+                preview.innerHTML = marked(content); // 正常渲染
+            } else {
+                console.error("Marked is not a function");
+            }
+        </script>
+        <link rel="stylesheet" href="css/reply.css">
     </head>
     <body>
         <header>
@@ -30,7 +47,7 @@
             <section>
                 <article>
                     <h2>帖子标题: ${postInfo.title} ${postInfo.fid}</h2>
-                    <p style="font-size: x-large">${postInfo.content}</p>
+                    <div id="preview" style="padding: 10px;">${postInfo.content}</div><br>
                     <fmt:formatDate value="${postInfo.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                     <div id="link">
                         <div style="float: right;">

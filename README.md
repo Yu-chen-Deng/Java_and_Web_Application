@@ -81,3 +81,4 @@ Course: Java_and_Web_Application
 ## 2024-11-21
 + css（用户页面下作者信息）
 + 发帖/更新帖子/管理员删帖子的Servlet
++ 修改为markdown语法发帖/更新帖子，不过有些问题，还得改。（后面还需要做图片水印和文件上传）
