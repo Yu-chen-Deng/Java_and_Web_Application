@@ -64,7 +64,7 @@
                                 <h3>帖子标题: ${post.title}</h3>
                                 <fmt:formatDate value="${post.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                                 <div id="link">
-                                    <span style="color: #007bff; font-weight: bold;">发布时间:${formattedDate}</span>
+                                    <span style="color: #037BC2; font-weight: bold;">发布时间:${formattedDate}</span>
                                     <a href="upServlet?fid=${post.fid}&URL=indexServlet">${empty up_msg  ||  upId != post.fid ? '点赞  ' : '点赞成功！ '}(  ${post.up}  )</a>
                                     <a href="findUserByIdServlet?userId=${post.userId}&URL=user_authorInfo.jsp" target="_blank">作者:${post.author.nickname}</a>
                                     <a href="getReplyByFidServlet?fid=${post.fid}&URL=reply.jsp" target="_blank">点此查看全帖</a>

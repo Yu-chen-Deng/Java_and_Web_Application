@@ -29,6 +29,25 @@
                 margin-bottom: 20px;
             }
         </style>
+        <script>
+            // 处理多行文本，筛选出以 #、##、### 开头的标题和没有符号的普通文本
+            function extractHeadersAndText(content) {
+                // 按行分割文本
+                const lines = content.split('\n');
+
+                // 正则匹配：筛选出标题行（以 # 开头）和没有符号的普通文本行
+                const resultLines = lines.filter(
+                line => /^#{1,6}\s/.test(line) || /^[^\#\*\|\[\-\+].*/.test(line)).map(
+                line => {// 对于标题行，去掉开头的 # 和空格
+                    if(/^#{1,6}\s/.test(line)) {
+                        // 去掉 # 和后面的空格
+                        return line.replace(/^#{1,6}\s/, '');}
+                    return line;  // 普通文本行保持不变
+                    });
+                // 将符合条件的行重新拼接成新的字符串
+                return resultLines.join(' ');
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -75,7 +94,15 @@
                     <section>
                         <article>
                             <h3>帖子标题: ${post.title}</h3>
-                            <p>${post.content}</p>
+                            <p id='preview'></p>
+                            <script>
+                                // 示例：从后台传来的内容
+                                const content = `${post.content}`
+                                // 提取出标题和普通文本部分
+                                const extractedContent = extractHeadersAndText(content);
+                                // 将提取的标题和普通文本部分显示在页面上
+                                document.getElementById('preview').innerText = extractedContent;
+                            </script>
                             <fmt:formatDate value="${post.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                             <div id="link">
                                 发布时间:${formattedDate}

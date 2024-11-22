@@ -53,7 +53,7 @@
                      <textarea name="content" id="content" rows="10" cols="50" oninput="updatePreview()" required></textarea><br>
 
                      <label for="preview">实时预览:</label>
-                     <div id="preview" style="border: 1px solid #ccc; padding: 10px;"></div><br>
+                     <div id="preview" style="border: 1px solid #ccc;"></div><br>
 
                      <input type="submit" value="提交">
                  </form>

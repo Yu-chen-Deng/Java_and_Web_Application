@@ -41,7 +41,6 @@
                                         <a href="upServlet">点赞( ${post.up} )</a>
                                         <a href="postInfoServlet?fid=${post.fid}" target="_blank">评论区</a>
                                         <a href="findUserByIdServlet?userId=${post.userId}&URL=authorInfo.jsp" target="_blank">作者:${post.author.nickname}</a>
-
                                     </div>
                                 </article>
                             </c:if>
