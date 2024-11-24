@@ -13,7 +13,7 @@
 
                 // 正则匹配：筛选出标题行（以 # 开头）和没有符号的普通文本行
                 const resultLines = lines.filter(
-                line => /^#{1,6}\s/.test(line) || /^[^\#\*\|\[\-\+].*/.test(line)).map(
+                line => /^#{1,6}\s/.test(line) || /^[^\#\*\|\!\[\-\+].*/.test(line)).map(
                 line => {// 对于标题行，去掉开头的 # 和空格
                     if(/^#{1,6}\s/.test(line)) {
                         // 去掉 # 和后面的空格

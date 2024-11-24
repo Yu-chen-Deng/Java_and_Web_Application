@@ -183,3 +183,8 @@ article {
     color: #02507e;
 }
 
+#preview p img {
+    width: 100%;
+}
+
+

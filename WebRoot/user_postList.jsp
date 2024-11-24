@@ -13,6 +13,26 @@
                 margin-bottom: 5px;
             }
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/marked@2.1.3/marked.min.js"></script>
+        <script>
+            marked.setOptions({
+                breaks: true,       // 支持换行符
+                gfm: true,          // 支持 GitHub 风格的 Markdown（包括表格、任务列表等）
+                tables: true,       // 启用表格支持
+                taskLists: true     // 启用任务列表支持
+            });
+
+            function updatePreview() {
+                const content = document.getElementById("content").value;
+                const preview = document.getElementById("preview-update");
+
+                if (typeof marked === "function") {
+                    preview.innerHTML = marked(content); // 正常渲染
+                } else {
+                    console.error("Marked is not a function");
+                }
+            }
+        </script>
         <script>
             // 处理多行文本，筛选出以 #、##、### 开头的标题和没有符号的普通文本
             function extractHeadersAndText(content) {
@@ -21,7 +41,7 @@
 
                 // 正则匹配：筛选出标题行（以 # 开头）和没有符号的普通文本行
                 const resultLines = lines.filter(
-                line => /^#{1,6}\s/.test(line) || /^[^\#\*\|\[\-\+].*/.test(line)).map(
+                line => /^#{1,6}\s/.test(line) || /^[^\#\*\|\!\[\-\+].*/.test(line)).map(
                 line => {// 对于标题行，去掉开头的 # 和空格
                     if(/^#{1,6}\s/.test(line)) {
                         // 去掉 # 和后面的空格
@@ -97,7 +117,10 @@
                             <input type="text" name="title" id="title" value="${post.title}" required><br><br>
 
                             <label for="content">更新内容：</label><br>
-                            <textarea id="content" name="content" required style="margin-top: 15px;">${post.content}</textarea><br><br>
+                            <textarea id="content" name="content" oninput="updatePreview()" required style="margin-top: 15px;">${post.content}</textarea><br><br>
+
+                            <label for="preview">实时预览:</label>
+                            <div id="preview-update" style="border: 1px solid #ccc;"></div><br>
 
                             <input type="submit" value="提交" style="float: right; margin-top: 10px">
                         </form>

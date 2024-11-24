@@ -85,3 +85,7 @@ Course: Java_and_Web_Application
 
 ## 2024-11-22
 + markdown支持（查看、编辑），帖子预览过滤markdown
+
+## 2024-11-24
++ 删除帖子、用户的Servlet
++ 水印处理还有问题，还需要进一步修改
