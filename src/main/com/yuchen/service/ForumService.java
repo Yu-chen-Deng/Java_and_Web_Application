@@ -25,11 +25,11 @@ public class ForumService {
     }
 
     //发帖
-    public void post (String title, String content, Date createTime, int userId) {
+    public void post (String title, String subtitle, String content, Date createTime, int userId) {
         sqlSession = MybatisUtils.getSqlSession();
         forumDao = sqlSession.getMapper(ForumDao.class);
         
-        forumDao.post(title, content, createTime, userId);
+        forumDao.post(title, subtitle, content, createTime, userId);
         
         sqlSession.commit();
         
@@ -110,11 +110,11 @@ public class ForumService {
     }
 
     //更新帖子
-    public int updatePost(String title, String content, int fid) {
+    public int updatePost(String title, String subtitle, String content, int fid) {
         sqlSession = MybatisUtils.getSqlSession();
         forumDao = sqlSession.getMapper(ForumDao.class);
 
-        int cnt = forumDao.updatePost(title, content, fid);
+        int cnt = forumDao.updatePost(title, subtitle, content, fid);
 
         sqlSession.commit();
         sqlSession.close();

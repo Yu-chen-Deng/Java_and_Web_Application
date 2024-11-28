@@ -49,6 +49,9 @@
                      <label for="title">标题:</label>
                      <input type="text" name="title" id="title" required><br>
 
+                     <label for="subtitle">子标题:</label>
+                     <input type="text" name="subtitle" id="subtitle" required><br>
+
                      <label for="content">Markdown内容:</label>
                      <textarea name="content" id="content" rows="10" cols="50" oninput="updatePreview()" required></textarea><br>
 

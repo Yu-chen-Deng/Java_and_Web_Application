@@ -10,6 +10,7 @@ public class Forum implements Serializable {
     private int userId;
     private int selected;
     private String title;
+    private String subtitle;
     private String content;
     private Date createTime;
     private User author = new User();
@@ -18,13 +19,14 @@ public class Forum implements Serializable {
 
     }
 
-    public Forum(int fid, int up, int replyCount, int userId, int selected, String title, String content, Date createTime, User author) {
+    public Forum(int fid, int up, int replyCount, int userId, int selected, String title, String subtitle, String content, Date createTime, User author) {
         this.fid = fid;
         this.up = up;
         this.replyCount = replyCount;
         this.userId = userId;
         this.selected = selected;
         this.title = title;
+        this.subtitle = subtitle;
         this.content = content;
         this.createTime = createTime;
         this.author = author;
@@ -78,6 +80,14 @@ public class Forum implements Serializable {
         this.title = title;
     }
 
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
+
     public String getContent() {
         return content;
     }
@@ -110,6 +120,7 @@ public class Forum implements Serializable {
                 ", replyCount=" + replyCount +
                 ", userId=" + userId +
                 ", title='" + title + "'" +
+                ", subtitle='" + subtitle + "'" +
                 ", content='" + content + "'" +
                 ", createTime=" + createTime +
                 ", author=" + author +
