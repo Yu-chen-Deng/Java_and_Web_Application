@@ -20,7 +20,11 @@
         </header>
 
         <div class="container">
-            <h2>所有用户</h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px;">
+                <h2 style="margin-bottom: 0px;">所有用户</h2>
+                <div id="link"><a href="#" target="_blank">导入用户（JSON格式）</a></div>
+            </div>
+
             <c:if test="${!empty del_msg}">
                 <h2 style="text-align: center; font-size: 36px">${del_msg}</h2>
             </c:if>
@@ -40,6 +44,7 @@
                             <div id="link">
                                 <a href="deleteUserServlet?userId=${user.id}&URL=getAllUserServlet" target="_blank">删除用户</a>
                                 <a href="findUserByIdServlet?userId=${user.id}&URL=admin_authorInfo.jsp" target="_blank">作者详情</a>
+                                <a href="toJsonServlet?userId=${user.id}" target="_blank">导出为JSON文件</a>
                             </div>
                         </article>
                     </section>

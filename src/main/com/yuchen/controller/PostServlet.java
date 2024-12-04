@@ -25,12 +25,13 @@ public class PostServlet extends HttpServlet {
         
         int userId = user.getId();
         String title = req.getParameter("title");
+        String subtitle = req.getParameter("subtitle");
         String content = req.getParameter("content");
         Date date= new Date();  
         String nowTime= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
         Timestamp createTime = Timestamp.valueOf(nowTime);//时间转换 java.util.Date是java.sql.Date的父类
         
-        forumService.post(title, content, createTime, userId);
+        forumService.post(title, subtitle, content, createTime, userId);
 
         req.setAttribute("post_msg", "发帖成功！");
         req.getRequestDispatcher("getUserPostListServlet").forward(req, resp);

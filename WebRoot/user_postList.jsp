@@ -70,7 +70,7 @@
         </header>
 
         <div class="container">
-            <h2 style="text-align: center; font-size: 36px">我的帖子</h2>
+            <h2>我的帖子</h2>
             <c:if test="${!empty post_msg}">
                 <h2 style="text-align: center; font-size: 36px">${post_msg}</h2>
             </c:if>
@@ -93,7 +93,7 @@
                             <p id='preview'></p>
                             <script>
                                 // 示例：从后台传来的内容
-                                const content = `${post.content}`
+                                const content = `${post.subtitle}`
                                 // 提取出标题和普通文本部分
                                 const extractedContent = extractHeadersAndText(content);
                                 // 将提取的标题和普通文本部分显示在页面上
@@ -116,8 +116,11 @@
                             <label for="title">标题：</label>
                             <input type="text" name="title" id="title" value="${post.title}" required><br><br>
 
+                            <label for="subtitle">标题：</label>
+                            <input type="text" name="subtitle" id="subtitle" value="${post.subtitle}" required><br><br>
+
                             <label for="content">更新内容：</label><br>
-                            <textarea id="content" name="content" oninput="updatePreview()" required style="margin-top: 15px;">${post.content}</textarea><br><br>
+                            <textarea id="content" name="content" oninput="updatePreview()" required style="margin-top: 15px;">${post.subtitle}</textarea><br><br>
 
                             <label for="preview">实时预览:</label>
                             <div id="preview-update" style="border: 1px solid #ccc;"></div><br>

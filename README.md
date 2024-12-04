@@ -95,3 +95,7 @@ Course: Java_and_Web_Application
 
 ## 2024-11-29
 + 优化帖子显示逻辑
+
+## 2024-12-04
++ 布局优化
++ 用户信息输出为json

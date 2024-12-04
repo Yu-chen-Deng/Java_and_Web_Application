@@ -21,6 +21,7 @@ public class UpdatePostServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int fid = Integer.parseInt(req.getParameter("fid"));
         String title = req.getParameter("title");
+        String subtitle = req.getParameter("subtitle");
         String content = req.getParameter("content");
 
         HttpSession httpSession = req.getSession();
@@ -28,7 +29,7 @@ public class UpdatePostServlet extends HttpServlet {
         User user = (User)httpSession.getAttribute("user");
 
         //更新操作
-        forumService.updatePost(title, content, fid);
+        forumService.updatePost(title, subtitle, content, fid);
 
         List<Forum> userPostList = forumService.getUserPostList(user.getId());
         userPostList.sort(Comparator.comparingInt(Forum::getFid).reversed());

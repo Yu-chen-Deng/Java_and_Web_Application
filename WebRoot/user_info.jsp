@@ -6,9 +6,6 @@
         <title>个人信息 - 西南大学校园论坛</title>
         <link rel="stylesheet" href="css/user_page.css">
         <style>
-            h2 {
-                text-align: center;
-            }
             .container a {
                 margin-right: 25px;
                 float: right;

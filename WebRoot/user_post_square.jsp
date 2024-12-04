@@ -56,7 +56,7 @@
                             <p id='preview'></p>
                             <script>
                                 // 示例：从后台传来的内容
-                                const content = `${post.content}`
+                                const content = `${post.subtitle}`
                                 // 提取出标题和普通文本部分
                                 const extractedContent = extractHeadersAndText(content);
                                 // 将提取的标题和普通文本部分显示在页面上

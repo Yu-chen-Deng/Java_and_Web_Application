@@ -34,7 +34,7 @@
                             <c:if test="${i.index < 2}">
                                 <article>
                                     <h3>帖子标题: ${post.title}</h3>
-                                    <p>${post.content}</p>
+                                    <p>${post.subtitle}</p>
                                     <fmt:formatDate value="${post.createTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                                     <div id="link">
                                         <span style="color: #037BC2; font-weight: bold;">发布时间:${formattedDate}</span>

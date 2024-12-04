@@ -60,12 +60,18 @@ nav ul li a:hover {
 
 .container {
     width: 80%;
-    margin: 35px auto;
+    margin: 20px auto;
     overflow: hidden;
 }
 
 section {
     margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #333;
 }
 
 article {
