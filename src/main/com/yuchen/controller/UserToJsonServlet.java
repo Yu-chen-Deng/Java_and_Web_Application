@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/userToJsonServlet")
 public class UserToJsonServlet extends HttpServlet{
@@ -23,19 +24,25 @@ public class UserToJsonServlet extends HttpServlet{
         ObjectMapper mapper = new ObjectMapper();
         int userId = Integer.parseInt(req.getParameter("userId"));
 
+        // 获取用户数据
         User selectedUser = userService.findUserById(userId);
 
-        // 获取 ServletContext 对象
-        ServletContext context = getServletContext();
-        String filePath = context.getRealPath("/") + "download";  // 获取 webroot 目录
-
+        // 将用户数据转换为 JSON 字符串
         String json = mapper.writeValueAsString(selectedUser);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(String.format("%s/%d.json", filePath, userId)))) {
-            writer.write(json);
+        // 设置响应内容类型为 JSON
+        resp.setContentType("application/json");
+
+        // 设置响应字符编码
+        resp.setCharacterEncoding("UTF-8");
+
+        // 将 JSON 数据写入响应流
+        try (PrintWriter out = resp.getWriter()) {
+            out.write(json);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
         //获取会话
 //        HttpSession httpSession = req.getSession();
@@ -46,7 +53,7 @@ public class UserToJsonServlet extends HttpServlet{
 //        else if(user instanceof User) req.getRequestDispatcher("user_page.jsp").forward(req, resp);
 //        else resp.sendRedirect("allPostServlet");
 //        req.getRequestDispatcher(String.format("downloadServlet?filename=%d.json", userId)).forward(req, resp);
-    }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

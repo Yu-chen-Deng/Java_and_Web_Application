@@ -126,3 +126,7 @@ article {
 #commentModal input[type="submit"]:hover {
     background-color: #012f4b;
 }
+
+td {
+    padding: 1px 15px;
+}

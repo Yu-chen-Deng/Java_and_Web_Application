@@ -102,3 +102,8 @@ Course: Java_and_Web_Application
 
 ## 2024-12-05
 + 文件下载功能
++ 服务器端通过Jackson将java对象序列化成json字符串返回
++ 客户端通过Ajax方式异步访问服务器API接口获取json数据
++ 客户端通过jquery将返回json数据渲染成页面上的html表格
++ 客户端通过获取form表单数据，转换成json提交到服务器
++ 服务器端将json反序列化成java对象，并存储到数据库
