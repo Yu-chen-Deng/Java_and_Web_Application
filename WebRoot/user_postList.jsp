@@ -116,7 +116,7 @@
                             <label for="title">标题：</label>
                             <input type="text" name="title" id="title" value="${post.title}" required><br><br>
 
-                            <label for="subtitle">标题：</label>
+                            <label for="subtitle">子标题：</label>
                             <input type="text" name="subtitle" id="subtitle" value="${post.subtitle}" required><br><br>
 
                             <label for="content">更新内容：</label><br>

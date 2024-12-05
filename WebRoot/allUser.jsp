@@ -22,8 +22,17 @@
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px;">
                 <h2 style="margin-bottom: 0px;">所有用户</h2>
-                <div id="link"><a href="#" target="_blank">导入用户（JSON格式）</a></div>
+                <div id="link"><a href="#" onclick="showCommentModal()">导入用户（JSON格式）</a></div>
             </div>
+
+        <!-- 弹窗更新帖子框 -->
+        <div id="commentModal" class="modal">
+            <button onclick="hideCommentModal()" style="float: right; margin-bottom: 10px">X</button>
+            <form action="updatePostServlet?fid=${post.fid}" method="post">
+
+                <input type="submit" value="导入" style="float: right; margin-top: 10px">
+            </form>
+        </div>
 
             <c:if test="${!empty del_msg}">
                 <h2 style="text-align: center; font-size: 36px">${del_msg}</h2>
@@ -44,7 +53,7 @@
                             <div id="link">
                                 <a href="deleteUserServlet?userId=${user.id}&URL=getAllUserServlet" target="_blank">删除用户</a>
                                 <a href="findUserByIdServlet?userId=${user.id}&URL=admin_authorInfo.jsp" target="_blank">作者详情</a>
-                                <a href="toJsonServlet?userId=${user.id}" target="_blank">导出为JSON文件</a>
+                                <a href="userToJsonServlet?userId=${user.id}" target="_blank">导出为JSON文件</a>
                             </div>
                         </article>
                     </section>
@@ -57,5 +66,15 @@
                 </div>
             </c:if>
         </div>
+
+        <script>
+            function showCommentModal() {
+                document.getElementById("commentModal").style.display = "block";
+            }
+
+            function hideCommentModal() {
+                document.getElementById("commentModal").style.display = "none";
+            }
+        </script>
     </body>
 </html>
