@@ -73,6 +73,13 @@
         WHERE id = #{userId}
     </update>
 
+    <!--    更新头像-->
+    <update id="update_avatar" parameterType="com.yuchen.bean.User">
+        update user_info
+        SET avatar = #{avatar}
+        WHERE id = #{userId}
+    </update>
+
 <!--    得到所有用户-->
     <select id="getAllUser" parameterType="com.yuchen.bean.User">
         select * from user_info

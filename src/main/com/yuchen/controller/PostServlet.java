@@ -22,7 +22,7 @@ public class PostServlet extends HttpServlet {
         //获取当前登录用户信息
         HttpSession httpSession = req.getSession();
         User user = (User) httpSession.getAttribute("user");
-        
+
         int userId = user.getId();
         String title = req.getParameter("title");
         String subtitle = req.getParameter("subtitle");

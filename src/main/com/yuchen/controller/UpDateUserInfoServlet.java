@@ -70,8 +70,11 @@ public class UpDateUserInfoServlet extends HttpServlet {
         else if ("email".equals(t)) {
             userService.update_email((String) req.getParameter("email"), id);
         }
-        else  {
+        else if ("signature".equals(t))  {
             userService.update_signature((String) req.getParameter("signature"), id);
+        }
+        else {
+            userService.update_avatar((String) req.getParameter("avatar"), id);
         }
 
         User user = userService.findUserById(id);

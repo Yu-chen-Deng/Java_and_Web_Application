@@ -12,11 +12,12 @@ public class User {
     private String phone;
     private String email;
     private String signature;
+    private String avatar;
     private Date birthday;
 
     public User() {
     }
-    public User(int id, String nickname, String username, String password, String sex, String phone, String email, String signature, Date birthday) {
+    public User(int id, String nickname, String username, String password, String sex, String phone, String email, String signature, String avatar, Date birthday) {
         this.id = id;
         this.nickname = nickname;
         this.username = username;
@@ -25,6 +26,7 @@ public class User {
         this.phone = phone;
         this.email = email;
         this.signature = signature;
+        this.avatar = avatar;
         this.birthday = birthday;
     }
 
@@ -92,6 +94,14 @@ public class User {
         this.signature = signature;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     public Date getBirthday() {
         return birthday;
     }
@@ -111,6 +121,7 @@ public class User {
                 ", phone='" + phone + "'" +
                 ", email='" + email + "'" +
                 ", signature='" + signature + "'" +
+                ", avatar='" + avatar + "'" +
                 ", birthday=" + birthday +
                 '}';
     }

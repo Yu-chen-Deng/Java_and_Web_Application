@@ -127,4 +127,15 @@ public class UserService {
         sqlSession.close();
     }
 
+    public void update_avatar(String avatar, int userId) {
+        sqlSession= MybatisUtils.getSqlSession();
+        userDao = sqlSession.getMapper(UserDao.class);
+
+        userDao.update_avatar(avatar, userId);
+
+        sqlSession.commit();
+
+        sqlSession.close();
+    }
+
 }

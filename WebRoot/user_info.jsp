@@ -169,6 +169,23 @@
                         <textarea name="signature" placeholder="请输入您的个人简介"></textarea>
                         <input type="submit" value="提交">
                     </form>
+
+                    <br>
+                    <p>头像：
+                        <a href="#" onclick="displayForm('avatar')">
+                            ${empty update_msg || t != "avatar" ? '点此修改头像' : '您已成功修改头像'}
+                        </a>
+                    </p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <img style="width:40%" src="${empty user.avatar ? 'avatar/blank.jpg' : user.avatar}"></img>
+                        <form id="avatar" style="display: none" action="/uploadServlet" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="t" value="avatar">
+                            <input type="hidden" name="id" value="${user.id}">
+                            <input type="file" name="file" id="fileInput"><br>
+                            <img id="previewImg" src="" alt="Image Preview" style="max-width: 200px; max-height: 200px; display: none;">
+                            <input type="submit" value="提交">
+                        </form>
+                    </div>
                 </article>
             </section>
         </div>
@@ -177,6 +194,26 @@
             function displayForm(formId) {
                 document.getElementById(formId).style.display = "block";
             }
+
+            // 获取文件输入框和预览图的引用
+            const fileInput = document.getElementById('fileInput');
+            const previewImg = document.getElementById('previewImg');
+
+            // 监听文件选择事件
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0]; // 获取选中的文件
+                if (file) {
+                    const reader = new FileReader(); // 创建FileReader对象
+
+                    // 监听文件读取完成事件
+                    reader.onload = function(e) {
+                        previewImg.src = e.target.result; // 将文件内容作为图片的src
+                        previewImg.style.display = 'block'; // 显示图片
+                    };
+
+                    reader.readAsDataURL(file); // 以数据URL的形式读取文件
+                }
+            });
         </script>
     </body>
 </html>

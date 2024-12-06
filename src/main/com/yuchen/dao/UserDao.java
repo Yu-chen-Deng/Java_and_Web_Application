@@ -18,6 +18,7 @@ public interface UserDao {
     void update_phone(@Param("phone") String phone, @Param("userId") int userId);
     void update_email(@Param("email") String email, @Param("userId") int userId);
     void update_signature(@Param("signature") String signature, @Param("userId") int userId);
+    void update_avatar(@Param("avatar") String avatar, @Param("userId") int userId);
     List<User> getAllUser();
     void delete_user(int id);
 }
