@@ -110,3 +110,6 @@ Course: Java_and_Web_Application
 
 ## 2024-12-06
 + 文件上传功能
+
+## 2024-12-08
++ 利用maven构建war包（后续会更新Setup步骤，包括数据库）

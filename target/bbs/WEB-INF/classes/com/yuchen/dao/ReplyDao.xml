@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yuchen.dao.ReplyDao">
+    <resultMap id="replyResultMap" type="Reply">
+        <result property="replyId" column="reply_id"/>
+        <result property="replyContent" column="reply_content"/>
+        <result property="replyTime" column="reply_time"/>
+        <result property="userId" column="user_id"/>
+
+<!--        嵌套查询-->
+        <association property="author" javaType="com.yuchen.bean.User"
+                     column="user_id"
+                     select="com.yuchen.dao.UserDao.findUserById"
+        >
+        </association>
+    </resultMap>
+    
+<!--    评论-->
+    <insert id="reply" parameterType="Reply">
+        insert into reply_info (reply_content, reply_time,user_id, fid) 
+        values (#{replyContent}, #{replyTime},  #{userId}, #{fid});
+    </insert>
+
+<!--    获取某个帖子的所有评论-->
+    <select id="getReplyByFid" resultMap="replyResultMap">
+        select * from reply_info where fid = #{fid};
+    </select>
+
+    <update id="replyUp" parameterType="Reply">
+        UPDATE reply_info
+        SET up = up + 1
+        WHERE reply_id = #{replyId}
+    </update>
+
+</mapper>

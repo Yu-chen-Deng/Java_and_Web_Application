@@ -85,6 +85,7 @@
   </dependencies>
 
   <build>
+    <sourceDirectory>src/main</sourceDirectory>
     <finalName>bbs</finalName>
       <plugins>
           <plugin>
