@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    background-color: #f5f5f5;
+}
+
+.init-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 420px;
+    text-align: center;
+}
+
+.init-container h2 {
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.init-form .form-group {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.init-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.init-form input[type="text"],
+.init-form input[type="password"] {
+    width: calc(100% - 30px);
+    padding: 14px;
+    border-radius: 20px;
+    border: 1px solid #cccccc;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+.init-form input[type="text"]:focus,
+.init-form input[type="password"]:focus {
+    border-color: #02507e;
+}
+
+.init-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 20px;
+    background-color: #02507e;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.init-form button:hover {
+    background-color: #012f4b;
+}
+
+.init-container .links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.init-container .links a {
+    color: #02507e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.init-container .links a:hover {
+    color: #012f4b;
+}
+
+.init-container .links p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.init-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.init-options input[type="radio"] {
+    display: none;
+}
+
+.init-options label {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.init-container .init-options input[type="radio"]:checked + label {
+    background-color: #02507e;
+    color: #fff;
+}

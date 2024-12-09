@@ -9,6 +9,7 @@ com\yuchen\filter\AuthFilter.class
 com\yuchen\controller\GetUserPostListServlet.class
 com\yuchen\controller\AdminDeletePostServlet.class
 com\yuchen\controller\UnsetSelectedPostServlet.class
+com\yuchen\filter\initDBFilter.class
 com\yuchen\controller\JsonToUserServlet.class
 com\yuchen\service\ReplyService.class
 com\yuchen\controller\DownloadServlet.class
@@ -41,6 +42,7 @@ com\yuchen\filter\WaterMarkFilter.class
 com\yuchen\utils\MybatisUtils.class
 com\yuchen\controller\GetReplyByFidServlet.class
 com\yuchen\controller\AllPostServlet.class
+com\yuchen\controller\InitDBServlet.class
 com\yuchen\controller\SetSelectedPostServlet.class
 com\yuchen\controller\FindUserByIdServlet.class
 com\yuchen\controller\ReplyServlet.class

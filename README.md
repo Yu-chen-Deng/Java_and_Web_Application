@@ -113,3 +113,6 @@ Course: Java_and_Web_Application
 
 ## 2024-12-08
 + 利用maven构建war包（后续会更新Setup步骤，包括数据库）
+
+## 2024-12-09
++ 添加初始化前端页面（如果没有swubbs数据库，就进入初始化页面）
