@@ -4,6 +4,7 @@
 <html>
     <head>
         <title>帖子广场 - 西南大学校园论坛</title>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <link rel="stylesheet" href="css/user_page.css">
         <script>
             // 处理多行文本，筛选出以 #、##、### 开头的标题和没有符号的普通文本

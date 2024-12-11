@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <link rel="stylesheet" href="css/register.css">
     <title>注册 - 西南大学校园论坛</title>
+    <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <div class="register-container">

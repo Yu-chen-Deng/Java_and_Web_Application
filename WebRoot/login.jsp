@@ -4,6 +4,7 @@
 <html lang="zh">
     <head>
         <title>登录 - 西南大学校园论坛</title>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <link rel="stylesheet" href="css/login.css">
     </head>
     <body>

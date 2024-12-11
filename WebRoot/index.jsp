@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
     </head>
     <body>
         <%

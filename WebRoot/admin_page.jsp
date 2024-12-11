@@ -4,6 +4,7 @@
 <html>
     <head>
         <title>管理 - 西南大学校园论坛</title>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <link rel="stylesheet" href="css/admin_page.css">
     </head>
     <body>

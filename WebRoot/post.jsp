@@ -4,6 +4,7 @@
 <html lang="zh">
     <head>
         <title>发帖 - 西南大学校园论坛</title>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <script src="https://cdn.jsdelivr.net/npm/marked@2.1.3/marked.min.js"></script>
         <script>
             marked.setOptions({

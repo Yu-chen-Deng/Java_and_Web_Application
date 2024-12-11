@@ -4,6 +4,7 @@
 <html>
     <head>
         <title>我的帖子 - 西南大学校园论坛</title>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <link rel="stylesheet" href="css/reply.css">
         <style>
             input[type="text"] {

@@ -4,6 +4,7 @@
 <html>
     <head>
         <title>首页 - 西南大学校园论坛</title>
+        <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <link rel="stylesheet" href="css/user_page.css">
     </head>
     <body>
