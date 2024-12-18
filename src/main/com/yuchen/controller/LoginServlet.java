@@ -2,6 +2,7 @@ package com.yuchen.controller;
 
 import com.yuchen.bean.AdminUser;
 import com.yuchen.bean.User;
+import com.yuchen.listener.OnlineUserListener;
 import com.yuchen.service.LoginService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -46,6 +47,9 @@ public class LoginServlet extends HttpServlet {
             }
 
             session.setAttribute("user", user);
+            // 添加用户到在线用户列表
+            OnlineUserListener.addUser(user);
+
             if ("1".equals(remember)) {
                 dealCookie(username, password, resp);
             }

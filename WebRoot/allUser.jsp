@@ -23,6 +23,18 @@
 
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px;">
+                <h2 style="margin-bottom: 0px;">在线用户&nbsp;${onlineCount}&nbsp;人</h2>
+            </div>
+            <c:if test="${not empty userList}">
+                <section>
+                    <article>
+                        <c:forEach var="user" items="${onlineUsers}" varStatus="i">
+                            <span style="color: green">●</span><a href="findUserByIdServlet?userId=${user.id}&URL=admin_authorInfo.jsp" target="_blank">${user.nickname}</a>
+                        </c:forEach>
+                    </article>
+                </section>
+            </c:if>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px;">
                 <h2 style="margin-bottom: 0px;">所有用户</h2>
                 <div id="link">
                     <a href="#" onclick="showCommentModal()">添加用户</a>
