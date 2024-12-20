@@ -26,12 +26,13 @@
                 </ul>
             </nav>
             <a href="user_info.jsp">${user.nickname}</a>
+            <img src="./img/yl.png" class="decoration"></img>
         </header>
 
         <div class="container">
             <section>
                 <article>
-                    <h2>帖子标题: ${postInfo.title} ${postInfo.fid}</h2>
+                    <h2>帖子标题: ${postInfo.title}</h2>
                     <div id="preview" style="padding: 10px;"></div><br>
                     <script>
                         marked.setOptions({
@@ -54,6 +55,7 @@
                             <a href="findUserByIdServlet?userId=${postInfo.userId}&URL=user_authorInfo.jsp" target="_blank">
                                 作者:${postInfo.author.nickname}
                             </a>
+                            <img style="margin-left: 10px; border-radius: 50%; height: 40px" src="${empty postInfo.author.avatar ? 'avatar/blank.jpg' : postInfo.author.avatar}"></img>
                         </div>
                     </div>
                     <div id="allReply">
@@ -72,9 +74,12 @@
                                     <div class="reply">
                                         <p>回复内容：${reply.replyContent}</p>
                                         <div class="replyInfo">
+                                            <div>
                                             <a href="findUserByIdServlet?userId=${reply.author.id}&URL=user_authorInfo.jsp" target="_blank">
                                                 回复人:${reply.author.nickname}
                                             </a>
+                                            <img style="border-radius: 50%; height: 40px" src="${empty reply.author.avatar ? 'avatar/blank.jpg' : reply.author.avatar}"></img>
+                                            </div>
 <%--                                            <span>回复人：${reply.author.nickname}</span>--%>
                                             <fmt:formatDate value="${reply.replyTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                                             <span>回复时间：${formattedDate}</span>

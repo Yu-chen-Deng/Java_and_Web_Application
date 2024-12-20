@@ -15,8 +15,8 @@
 
 <!--    添加用户-->
     <insert id="add_User" parameterType="com.yuchen.bean.User">
-        insert into user_info (nickname, username, password, birthday, sex, phone, email, signature)
-        values (#{nickname}, #{username}, #{password}, #{birthday}, #{sex}, #{phone}, #{email}, #{signature})
+        insert into user_info (nickname, username, password, birthday, sex, phone, email, signature, avatar)
+        values (#{nickname}, #{username}, #{password}, #{birthday}, #{sex}, #{phone}, #{email}, #{signature}, #{avatar})
     </insert>
 
 <!--    通过id查找用户-->

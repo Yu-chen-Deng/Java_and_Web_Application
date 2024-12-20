@@ -92,3 +92,10 @@ article {
     font-weight: bold;
     text-align: right;
 }
+
+.decoration {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    width: 20%;
+}

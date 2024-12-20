@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="swubbs" default="build">
+
+    <!-- 初始化目标：设置参数 -->
+    <target name="init">
+        <echo message="设置项目参数" />
+        <property name="project.name" value="swubbs" />
+        <property name="jar.name" value="swubbs.jar" />
+        <property name="build.dir" value="./build/classes" />
+        <property name="src.dir" value="./src" />
+        <property name="resource.dir" value="./src/resources" />
+        <property name="lib.dir" value="./WebRoot/WEB-INF/lib" />
+        <property name="dist.dir" value="./dist" />
+        <property name="webapp.dir" value="./WebRoot" />
+        <property name="target" value="1.8" />
+        <property name="source" value="1.8" />
+    </target>
+
+    <!-- 配置类路径 -->
+    <path id="classpath">
+        <!-- 添加 servlet-api 和其他依赖的 JAR 文件 -->
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar" />
+        </fileset>
+        <fileset dir="${build.dir}">
+            <include name="*.class" />
+        </fileset>
+    </path>
+
+    <!-- 清理目标：删除构建目录 -->
+    <target name="cleanup" depends="init">
+        <echo message="清空构建目录" />
+        <delete dir="${build.dir}" />
+        <mkdir dir="${build.dir}" />
+        <delete dir="${dist.dir}" />
+        <mkdir dir="${dist.dir}" />
+    </target>
+
+    <!-- 编译源代码 -->
+    <target name="compile" depends="init">
+        <echo message="编译源代码" />
+        <javac srcdir="${src.dir}" destdir="${build.dir}"
+               target="${target}" source="${source}" fork="true" debug="true" encoding="UTF-8" includeantruntime="false">
+            <classpath refid="classpath" />
+            <include name="**/*.java" />
+        </javac>
+    </target>
+
+    <!-- 打包 JAR 文件 -->
+    <target name="pack-jar" depends="compile">
+        <echo message="打包 JAR 文件" />
+        <jar destfile="${lib.dir}/${war.name}">
+            <zipfileset dir="${build.dir}" prefix="WEB-INF/classes" includes="**/*.class"/>
+        </jar>
+    </target>
+
+    <!-- 打包 WAR 文件 -->
+    <target name="pack-war" depends="compile">
+        <echo message="打包 WAR 文件" />
+        <jar destfile="${dist.dir}/${war.name}">
+            <!-- 包含 Web 应用资源 -->
+            <zipfileset dir="${webapp.dir}" includes="**/*.*"/>
+            <!-- 包含所有依赖 JAR -->
+            <zipfileset dir="${lib.dir}" prefix="WEB-INF/lib" includes="**/*.jar"/>
+            <!-- 如果需要，打包 web.xml -->
+            <zipfileset dir="${webapp.dir}/WEB-INF" prefix="WEB-INF" includes="web.xml"/>
+        </jar>
+    </target>
+
+    <!-- 构建整个项目：清理、编译、打包 JAR 和 WAR -->
+    <target name="build" depends="cleanup">
+        <antcall target="compile" />
+        <antcall target="pack-jar" />
+        <antcall target="pack-war" />
+    </target>
+
+</project>

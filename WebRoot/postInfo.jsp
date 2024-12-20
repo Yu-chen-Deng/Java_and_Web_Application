@@ -19,6 +19,7 @@
                     <li><a href="login.jsp">登录</a></li>
                 </ul>
             </nav>
+            <img src="./img/yl.png" class="decoration"></img>
         </header>
 
         <div class="container">
@@ -42,6 +43,7 @@
                             <span style="color: #007bff; font-weight: bold;">发布时间:${formattedDate}</span>
                             <a href="upServlet">点赞( ${postInfo.up} )</a>
                             <a href="findUserByIdServlet?userId=${postInfo.userId}&URL=authorInfo.jsp" target="_blank">作者:${postInfo.author.nickname}</a>
+                            <img style="margin-left: 10px; border-radius: 50%; height: 40px" src="${empty postInfo.author.avatar ? 'avatar/blank.jpg' : postInfo.author.avatar}"></img>
                         </div>
                     </div>
 
@@ -56,9 +58,12 @@
                                     <div class="reply">
                                         <p>回复内容：${reply.replyContent}</p>
                                         <div class="replyInfo">
-                                            <a href="findUserByIdServlet?userId=${reply.author.id}&URL=authorInfo.jsp" target="_blank">
+                                            <div>
+                                            <a href="findUserByIdServlet?userId=${reply.author.id}&URL=user_authorInfo.jsp" target="_blank">
                                                 回复人:${reply.author.nickname}
                                             </a>
+                                            <img style="border-radius: 50%; height: 40px" src="${empty reply.author.avatar ? 'avatar/blank.jpg' : reply.author.avatar}"></img>
+                                            </div>
 <%--                                            <span>回复人：${reply.author.nickname}</span>--%>
                                             <fmt:formatDate value="${reply.replyTime}" pattern="yyyy-MM-dd HH:mm" var="formattedDate" />
                                             <span>回复时间：${formattedDate}</span>

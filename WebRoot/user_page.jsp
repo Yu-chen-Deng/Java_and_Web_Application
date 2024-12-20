@@ -21,6 +21,7 @@
                 </ul>
             </nav>
             <a href="user_info.jsp">${user.nickname}</a>
+            <img src="./img/yl.png" class="decoration"></img>
         </header>
 
         <div class="container">

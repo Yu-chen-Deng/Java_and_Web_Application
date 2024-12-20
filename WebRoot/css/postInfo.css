@@ -134,7 +134,7 @@ article {
 
 .replyInfo {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -154,4 +154,11 @@ article {
 
 #preview p img {
     width: 100%;
+}
+
+.decoration {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    width: 20%;
 }

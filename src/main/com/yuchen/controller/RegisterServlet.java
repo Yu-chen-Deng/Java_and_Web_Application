@@ -66,6 +66,7 @@ public class RegisterServlet extends HttpServlet {
         user.setNickname(nickname);
         user.setUsername(username);
         user.setPassword(password);
+        user.setAvatar("avatar/blank.jpg");
         userService.register(user);
         req.setAttribute("register_msg", "注册成功， 请登录");
         req.getRequestDispatcher("/login.jsp").forward(req, resp);

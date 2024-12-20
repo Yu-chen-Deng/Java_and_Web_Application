@@ -20,6 +20,7 @@
                     <li><a href="login.jsp">登录</a></li>
                 </ul>
             </nav>
+            <img src="./img/yl.png" class="decoration"></img>
         </header>
 
         <div class="container">
