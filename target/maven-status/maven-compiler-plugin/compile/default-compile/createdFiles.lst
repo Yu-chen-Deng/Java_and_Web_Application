@@ -22,6 +22,7 @@ com\yuchen\controller\DeletePostServlet.class
 com\yuchen\controller\LogoutServlet.class
 com\yuchen\service\AdminUserService.class
 com\yuchen\controller\RegisterServlet.class
+com\yuchen\listener\OnlineUserListener.class
 com\yuchen\controller\PostServlet.class
 com\yuchen\controller\UpDateUserInfoServlet.class
 com\yuchen\controller\CheckCodeServlet.class

@@ -12,6 +12,5 @@
         <%
             response.sendRedirect("indexServlet");
         %>
-
     </body>
 </html>

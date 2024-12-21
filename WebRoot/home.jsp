@@ -6,6 +6,9 @@
     <head>
         <link rel="stylesheet" href="css/home.css">
         <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
+        <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
         <title>首页 - 西南大学校园论坛</title>
     </head>
 
@@ -76,5 +79,19 @@
                 </c:if>
             </section>
         </div>
+        <div id="aplayer01" style="position: fixed; width: 100%; bottom: 0px;"></div>
+        <script type="text/javascript">
+            const ap = new APlayer({
+        　　　　  //定义容器
+                container: document.getElementById('aplayer01'),
+        　　　　 //关于音频的相关参数：
+                audio: [{
+                    name: '西南大学校歌',//音频名称
+                    artist: '西南大学',//艺术家
+                    url: './music/西南大学校歌.mp3',//文件地址
+                    cover: 'http://p1.music.126.net/iaPfgQXdAlE69DKJOwKPPw==/109951164313435272.jpg'//封面地址
+                }]
+            });
+        </script>
     </body>
 </html>

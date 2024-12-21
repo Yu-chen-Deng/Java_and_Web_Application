@@ -10,6 +10,10 @@ Course: Java_and_Web_Application
 + MySQL 8.4
 + Windows 11
 
+# How To Setup
+1. 将 swubbs.war 文件部署到 Tomcat 服务器。
+2. 在浏览器中访问 Tomcat 指定的网页，格式为 ```http(s):// localhost:端口号 / tomcat设定 / initDB.jsp```，即可完成设置。
+
 # TO DO
 
 计划实现一个校园论坛系统，预期实现功能如下：
@@ -125,3 +129,8 @@ Course: Java_and_Web_Application
 
 ## 2024-12-20
 + 前端页面优化
+
+## 2024-12-21
++ 代码整理
++ 音乐播放器
++ 说明文档添加部署步骤

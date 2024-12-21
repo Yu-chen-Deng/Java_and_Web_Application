@@ -24,6 +24,7 @@ public class initDBFilter implements jakarta.servlet.Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         // 如果数据库未连接，重定向到数据库初始化页面
+        checkDatabaseConnection();
         if (!isDatabaseConnected) {
             HttpServletResponse httpResponse = (HttpServletResponse) response;
             httpResponse.sendRedirect("/initDB.jsp");  // 跳转到数据库初始化页面

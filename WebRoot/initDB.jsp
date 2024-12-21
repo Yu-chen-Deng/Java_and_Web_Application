@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
-        <title>登录 - 西南大学校园论坛</title>
+        <title>初始化 - 西南大学校园论坛</title>
         <link rel="shortcut icon" type="image/x-icon" href="swu.ico" media="screen">
         <link rel="stylesheet" href="css/initDB.css">
     </head>
